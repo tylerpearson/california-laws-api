@@ -1,7 +1,7 @@
 class SectionSerializer < ActiveModel::Serializer
   attributes :id, :code, :section, :op_statues, :op_chapter, :op_section, :effective_date,
     :law_section_version_id, :division, :title, :part, :chapter, :article, :history,
-    :content
+    :content, :active
 
   def op_statues
     object.op_statues.to_f
