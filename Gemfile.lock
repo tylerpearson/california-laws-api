@@ -85,6 +85,9 @@ GEM
   specs:
     active_model_serializers (0.10.0.rc2)
       activemodel (>= 4.0)
+    annotate (2.6.7)
+      activerecord (>= 2.3.0)
+      rake (~> 10.4.2, >= 10.4.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -133,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0.rc2)
+  annotate (~> 2.6.6)
   arel!
   byebug
   mysql2
