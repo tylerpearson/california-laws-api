@@ -1,18 +1,46 @@
-class Section < ActiveRecord::Base
-  self.primary_key = 'id'
-  self.table_name = 'law_section'
+class SectionSerializer < ActiveModel::Serializer
+  attributes :id, :code, :section, :op_statues, :op_chapter, :op_section, :effective_date,
+    :law_section_version_id, :division, :title, :part, :chapter, :article, :history,
+    :content
 
-  default_scope { order('id ASC') }
-
-  belongs_to :code, foreign_key: :law_code
-
-  def content
-    content_xml.gsub(/<.+?>/, ' ').squish
+  def op_statues
+    object.op_statues.to_f
   end
 
-  def active
-    return false if active_flg == "N"
-    true
+  def op_chapter
+    object.op_chapter.to_f
+  end
+
+  def op_section
+    object.op_section.to_f
+  end
+
+  def code
+    object.law_code
+  end
+
+  def section
+    object.section_num.to_f
+  end
+
+  def division
+    object.division.to_f
+  end
+
+  def title
+    object.title.to_f if !object.title.nil?
+  end
+
+  def part
+    object.part.to_f if !object.title.nil?
+  end
+
+  def chapter
+    object.chapter.to_f
+  end
+
+  def article
+    object.article.to_f
   end
 
 end

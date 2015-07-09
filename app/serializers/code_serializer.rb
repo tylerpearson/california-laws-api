@@ -10,3 +10,11 @@ class CodeSerializer < ActiveModel::Serializer
   end
 
 end
+
+# == Schema Information
+#
+# Table name: codes
+#
+#  code  :string(5)        primary key
+#  title :string(2000)
+#
