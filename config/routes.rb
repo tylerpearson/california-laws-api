@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :codes, only: :index, defaults: { format: 'json' }
-  resources :sections, only: :index, defaults: { format: 'json' }
+  namespace :api, path: '/', defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :codes, only: :index
+      resources :sections, only: :index
+    end
+  end
 
 end
