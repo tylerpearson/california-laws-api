@@ -9,10 +9,11 @@ module Api
 
       def index
         @sections = Section.where(nil)
-        @sections = @sections.code(params[:code]) if params[:code].present?
-        @sections = @sections.division(params[:division]) if params[:division].present?
-        @sections = @sections.chapter(params[:chapter]) if params[:chapter].present?
-        @sections = @sections.article(params[:article]) if params[:article].present?
+
+        filter_params(params).each do |key, value|
+          @sections = @sections.public_send(key, value) if value.present?
+        end
+
         @sections = @sections.page(params[:page])
 
         render json: @sections, meta: {
@@ -24,6 +25,13 @@ module Api
         }
       end
 
+      private
+
+        def filter_params(params)
+          params.slice(:code, :division, :chapter, :article)
+        end
+
     end
+
   end
 end
