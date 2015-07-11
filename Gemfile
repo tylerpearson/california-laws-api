@@ -10,6 +10,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 gem 'kaminari'
 gem 'annotate', '~> 2.6.6'
 gem 'rack-cors'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
