@@ -23,26 +23,6 @@ class SectionSerializer < ActiveModel::Serializer
     object.section_num
   end
 
-  def division
-    object.division.to_f
-  end
-
-  def title
-    object.title.to_f if !object.title.nil?
-  end
-
-  def part
-    object.part.to_f if !object.title.nil?
-  end
-
-  def chapter
-    object.chapter.to_f
-  end
-
-  def article
-    object.article.to_f
-  end
-
 end
 
 # == Schema Information
