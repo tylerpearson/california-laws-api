@@ -4,9 +4,9 @@ class Section < ActiveRecord::Base
 
   default_scope { order('id ASC') }
   scope :code, -> (code) { where law_code: code.upcase }
-  scope :division, -> (division) { where division: "#{division}." }
-  scope :chapter, -> (chapter) { where chapter: "#{chapter}." }
-  scope :article, -> (article) { where article: "#{article}." }
+  scope :division, -> (division) { where division: check_ending_dot(division) }
+  scope :chapter, -> (chapter) { where chapter: check_ending_dot(chapter) }
+  scope :article, -> (article) { where article: check_ending_dot(article) }
 
   belongs_to :code, foreign_key: :law_code
 
@@ -21,6 +21,16 @@ class Section < ActiveRecord::Base
   def code
     law_code
   end
+
+  private
+
+    def self.check_ending_dot(check)
+      check = check.to_s
+      if check[-1,1] != "."
+        return "#{check}."
+      end
+      check
+    end
 
 end
 
