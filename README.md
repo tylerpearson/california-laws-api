@@ -22,7 +22,7 @@ For a direct link to the JSON for a law, pass the id in the URL. For example htt
 
 There is a MySQL database of California state codes available through FTP at ftp://www.leginfo.ca.gov/pub/bill/. Inside the directory are [instructions on importing the tables](https://s3.amazonaws.com/cali-laws/pubinfo_Readme.pdf) that are needed.
 
-Here's a [direct link to the converted and imported MySQL database](https://s3.amazonaws.com/cali-laws/calaws.mysql) that I put up on S3 if you prefer not to deal with that. It's for the 2015 state code.
+Here's a [direct link to the converted and imported MySQL database](https://s3.amazonaws.com/cali-laws/calaws.mysql) that I put up on S3 if you prefer not to deal with that. It's for the 2015 state code with a last modified listed as June 2015.
 
 ### Heroku
 
