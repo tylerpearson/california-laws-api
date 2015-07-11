@@ -12,9 +12,9 @@ A list of codes is available at http://www.calilaws.com/api/v1/codes
 
 A list of sections of state code is available at `http://www.calilaws.com/api/v1/sections`.
 
-The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be `http://www.calilaws.com/api/v1/sections?code=ELEC&division=1`. There is information on pagination in `meta` in the JSON response.
+The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be http://www.calilaws.com/api/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
 
-To direct link to the JSON for a law, pass the id in the URL. For example `http://www.calilaws.com/api/v1/sections/ELEC1500.20048177`
+To direct link to the JSON for a law, pass the id in the URL. For example http://www.calilaws.com/api/v1/sections/ELEC1500.20048177
 
 ## Database setup
 
@@ -28,6 +28,7 @@ The database can be converted to Postgres for easy installation on Heroku. One o
 
 - `mysqldump --compatible=postgresql --default-character-set=utf8 -r calaws.mysql -u root capublic`
 - `python dbconverter.py calaws.mysql calaws.psql`
-- It can be loaded from a local dump with `heroku pg:psql < db-dumps/calaws.psql`
+
+It can be loaded from a local dump with `heroku pg:psql < db-dumps/calaws.psql`. You'll likely need to comment out the creation of the `schema_migrations` table.
 
 
