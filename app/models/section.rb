@@ -15,8 +15,7 @@ class Section < ActiveRecord::Base
   end
 
   def active
-    return false if active_flg == "N"
-    true
+    active_flg == "Y"
   end
 
   def code
