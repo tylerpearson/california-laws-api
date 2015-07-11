@@ -14,13 +14,15 @@ A list of sections of state code is available at http://www.calilaws.com/api/v1/
 
 The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be http://www.calilaws.com/api/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
 
-To direct link to the JSON for a law, pass the id in the URL. For example http://www.calilaws.com/api/v1/sections/ELEC1500.20048177
+For a direct link to the JSON for a law, pass the id in the URL. For example http://www.calilaws.com/api/v1/sections/ELEC1500.20048177
 
 ## Database setup
 
 ### Locally
 
-There is a MySQL database of California state codes available through FTP at ftp://www.leginfo.ca.gov/pub/bill/. There are [instructions on importing the tables](https://s3.amazonaws.com/cali-laws/pubinfo_Readme.pdf) in the zip.
+There is a MySQL database of California state codes available through FTP at ftp://www.leginfo.ca.gov/pub/bill/. Inside the directory are [instructions on importing the tables](https://s3.amazonaws.com/cali-laws/pubinfo_Readme.pdf) that are needed.
+
+Here's a [direct link to the converted and imported MySQL database](https://s3.amazonaws.com/cali-laws/calaws.mysql) that I put up on S3 if you prefer not to deal with that. It's for the 2015 state code.
 
 ### Heroku
 
