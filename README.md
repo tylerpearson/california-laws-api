@@ -6,15 +6,15 @@ This is an API for the California state code that is available as JSON. Currentl
 
 ### Codes
 
-A list of codes is available at http://www.calilaws.com/api/v1/codes
+A list of codes is available at http://api.calilaws.com/v1/codes
 
 ### Sections
 
-A list of sections of state code is available at http://www.calilaws.com/api/v1/sections.
+A list of sections of state code is available at http://api.calilaws.com/v1/sections.
 
-The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be http://www.calilaws.com/api/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
+The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be http://api.calilaws.com/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
 
-For a direct link to the JSON for a law, pass the id in the URL. For example http://www.calilaws.com/api/v1/sections/ELEC1500.20048177
+For a direct link to the JSON for a law, pass the id in the URL. For example http://api.calilaws.com/v1/sections/ELEC1500.20048177
 
 ## Database setup
 
