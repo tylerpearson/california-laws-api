@@ -33,4 +33,10 @@ The database can be converted to Postgres for easy installation on Heroku. One o
 
 It can be loaded from a local dump with `heroku pg:psql < db-dumps/calaws.psql`. You'll likely need to comment out the creation of the `schema_migrations` table.
 
+## Next steps
 
+Things that can be done next:
+
+- Build a UI so it can be browsed online as an alternative to the official [California Legislative Information](http://leginfo.legislature.ca.gov/faces/codes.xhtml) site.
+- Automate updates with the latest laws. This would be downloading from FTP, converting, and uploading.
+- Index with something like Elasticsearch or a search-as-a-service platform like [Algolia](https://www.algolia.com/), so it easier to for people to find specific laws.
