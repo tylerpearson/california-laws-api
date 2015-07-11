@@ -1,6 +1,12 @@
 module Api
   module V1
     class SectionsController < ApplicationController
+
+      def show
+        @section = Section.find_by_id(params[:id])
+        render json: @section
+      end
+
       def index
         @sections = Section.page(params[:page])
         render json: @sections, meta: {
@@ -11,6 +17,7 @@ module Api
           total_count: @sections.total_count
         }
       end
+
     end
   end
 end
