@@ -5,7 +5,7 @@ gem 'sprockets-rails', github: "rails/sprockets-rails"
 gem 'arel', github: "rails/arel"
 gem 'mysql2'
 gem 'active_model_serializers', '~> 0.10.0.rc2'
-
+gem 'kaminari'
 gem 'annotate', '~> 2.6.6'
 gem 'rack-cors'
 
