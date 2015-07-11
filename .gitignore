@@ -17,5 +17,6 @@
 !/log/.keep
 !/tmp/.keep
 
-calaws.mysql
-calaws.psql
+db-dumps/*
+
+.DS_Store
