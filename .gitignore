@@ -16,3 +16,6 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+calaws.mysql
+calaws.psql
