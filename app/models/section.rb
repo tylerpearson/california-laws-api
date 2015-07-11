@@ -3,6 +3,10 @@ class Section < ActiveRecord::Base
   self.table_name = 'law_section'
 
   default_scope { order('id ASC') }
+  scope :code, -> (code) { where law_code: code.upcase }
+  scope :division, -> (division) { where division: "#{division}." }
+  scope :chapter, -> (chapter) { where chapter: "#{chapter}." }
+  scope :article, -> (article) { where article: "#{article}." }
 
   belongs_to :code, foreign_key: :law_code
 
@@ -13,6 +17,10 @@ class Section < ActiveRecord::Base
   def active
     return false if active_flg == "N"
     true
+  end
+
+  def code
+    law_code
   end
 
 end

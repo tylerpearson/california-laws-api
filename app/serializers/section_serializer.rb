@@ -4,7 +4,7 @@ class SectionSerializer < ActiveModel::Serializer
     :content, :active
 
   def op_statues
-    object.op_statues.to_f
+    object.op_statues
   end
 
   def op_chapter
@@ -20,7 +20,7 @@ class SectionSerializer < ActiveModel::Serializer
   end
 
   def section
-    object.section_num.to_f
+    object.section_num
   end
 
   def division
