@@ -10,9 +10,10 @@ There is a MySQL database of California state codes available through FTP at ftp
 
 ### Heroku
 
-The database can be converted to Postgres for easy installation on Heroku. One option is to dump the database and convert with [Lanyrd's MySQL to PostgreSQL conversion script](https://github.com/lanyrd/mysql-postgresql-converter) and upload to S3.
+The database can be converted to Postgres for easy installation on Heroku. One option is to dump the database and convert with [Lanyrd's MySQL to PostgreSQL conversion script](https://github.com/lanyrd/mysql-postgresql-converter).
 
 - `mysqldump --compatible=postgresql --default-character-set=utf8 -r calaws.mysql -u root capublic`
 - `python dbconverter.py calaws.mysql calaws.psql`
+- It can be loaded from a local dump with `heroku pg:psql < db-dumps/calaws.psql`
 
 
