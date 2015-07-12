@@ -16,6 +16,10 @@ The laws can be sorted by `code`, `division`, `chapter`, and `article` by passin
 
 For a direct link to the JSON for a law, pass the id in the URL. For example https://api.calilaws.com/v1/sections/ELEC1500.20048177
 
+### Search
+
+Search the state code with `https://api.calilaws.com/v1/search/<search term>`. For example https://api.calilaws.com/v1/search/landlord. The search is setup with Elasticsearch.
+
 ## Database setup
 
 ### Locally
