@@ -11,6 +11,8 @@ gem 'kaminari'
 gem 'annotate', '~> 2.6.6'
 gem 'rack-cors'
 gem 'puma'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 group :development, :test do
   gem 'byebug'
