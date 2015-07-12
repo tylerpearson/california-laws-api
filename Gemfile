@@ -12,7 +12,6 @@ gem 'rack-cors'
 gem 'puma'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
