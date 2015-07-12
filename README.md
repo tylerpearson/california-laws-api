@@ -14,7 +14,7 @@ A list of codes is available at https://api.calilaws.com/v1/codes
 
 A list of sections of state code is available at https://api.calilaws.com/v1/sections.
 
-The laws can be sorted by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be https://api.calilaws.com/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
+The laws can be filtered by `code`, `division`, `chapter`, and `article` by passing it along as parameters in the URL. An example would be https://api.calilaws.com/v1/sections?code=ELEC&division=1. There is information on pagination in `meta` in the JSON response.
 
 For a direct link to the JSON for a law, pass the id in the URL. For example https://api.calilaws.com/v1/sections/ELEC1500.20048177
 
