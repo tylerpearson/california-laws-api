@@ -1,4 +1,6 @@
 class Section < ActiveRecord::Base
+  include Searchable
+
   self.primary_key = 'id'
   self.table_name = 'law_section'
 

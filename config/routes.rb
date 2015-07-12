@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root to: 'base#index'
     namespace :v1 do
       resources :codes, only: :index
+      get '/search/:search' => 'search#index'
       get '/sections' => 'sections#index'
       get '/sections/:id' => 'sections#show', :constraints => { :id => /[^\/]+/ }
     end
