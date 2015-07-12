@@ -1,12 +1,12 @@
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 4767bb11c280f97262d221c47af8d39ab4fd583f
+  revision: 14df08d80fc363fb9932d9534503b3276d30d9a5
   specs:
     arel (7.0.0.alpha)
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 5ea8efecd08a71ca78688105a39b8a94236443ed
+  revision: 794252d70990162d14da17ee854ad353e74297ee
   specs:
     actionmailer (5.0.0.alpha)
       actionpack (= 5.0.0.alpha)
@@ -72,9 +72,9 @@ GIT
 
 GIT
   remote: git://github.com/rails/web-console.git
-  revision: 01732d184e00580fcc701f7f5e01accf81a43cd9
+  revision: baafb8e6d074c7b0532b6da6bfd6fe3be5e1549f
   specs:
-    web-console (2.1.3)
+    web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
