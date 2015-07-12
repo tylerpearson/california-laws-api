@@ -43,4 +43,3 @@ Things that can be done next:
 
 - Build a UI so it can be browsed online as an alternative to the official [California Legislative Information](http://leginfo.legislature.ca.gov/faces/codes.xhtml) site.
 - Automate updates with the latest laws. This would be downloading from FTP, converting, and uploading.
-- Index with something like Elasticsearch or a search-as-a-service platform like [Algolia](https://www.algolia.com/), so it's easier for people to find specific laws.
