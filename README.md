@@ -2,6 +2,8 @@
 
 This is an API for the California state code that is available as JSON. Currently the state of [California mades it difficult to access the laws programmatically](https://github.com/tylerpearson/state-code-scrapers/blob/master/ca/scrape.rb), so this is an attempt at making that easier.
 
+IANAL, so if you have ideas on adjusting the API structure to better match the structure of state code and make it easier to use, please feel free to add an issue.
+
 ## Endpoints
 
 ### Codes
@@ -26,7 +28,9 @@ Search the state code with `https://api.calilaws.com/v1/search/<search term>`. F
 
 There is a MySQL database of California state codes available through FTP at ftp://www.leginfo.ca.gov/pub/bill/. Inside the directory are [instructions on importing the tables](https://s3.amazonaws.com/cali-laws/pubinfo_Readme.pdf) that are needed.
 
-Here's a [direct link to the converted and imported MySQL database](https://s3.amazonaws.com/cali-laws/calaws.mysql) that I put up on S3 if you prefer not to deal with that. It's for the 2015 state code with a last modified listed as June 2015.
+Here's a [direct link to a dump of the imported and converted MySQL database](https://s3.amazonaws.com/cali-laws/calaws.mysql) that I put up on S3 if you prefer not to deal with that. It's for the 2015 state code with a last modified listed as June 2015.
+
+The Elasticsearch index can be imported with `Section.import`.
 
 ### Heroku
 
@@ -36,6 +40,8 @@ The database can be converted to Postgres for easy installation on Heroku. One o
 - `python dbconverter.py calaws.mysql calaws.psql`
 
 It can be loaded from a local dump with `heroku pg:psql < db-dumps/calaws.psql`. You'll likely need to comment out the creation of the `schema_migrations` table.
+
+Populate Elasticsearch with `heroku run bundle exec rake environment elasticsearch:import:model CLASS='Section' FORCE=true`.
 
 ## Next steps
 
