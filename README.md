@@ -1,6 +1,6 @@
 # API for California State Code
 
-This is an API for the California state code that is available as JSON. Currently the state of [California mades it difficult to access the laws programmatically](https://github.com/tylerpearson/state-code-scrapers/blob/master/ca/scrape.rb), so this is an attempt at making that easier.
+This is an API for the California state code that is available as JSON. Currently the state of California makes it difficult to access the laws programmatically [(here is a first pass at scraping to get the data)](https://github.com/tylerpearson/state-code-scrapers/blob/master/ca/scrape.rb), so this is an attempt at making that easier.
 
 IANAL, so if you have ideas on adjusting the API structure to better match the structure of state code and make it easier to use, please feel free to add an issue.
 
